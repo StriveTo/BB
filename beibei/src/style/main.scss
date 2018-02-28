@@ -9,7 +9,7 @@
         bottom: 0.4rem;
         width: 0.5rem;
         height: 0.5rem;
-        line-height: 0.15rem;
+        line-height: 0.6rem;
         background: rgba($color: #FFF, $alpha: 0.8);
         z-index: 1000;
         border-radius: 0.25rem;
@@ -107,7 +107,7 @@
                     text-align: center;
                     padding-bottom: 0.15rem;
                 }
-                ul{
+                .tle{
                     display: flex;
                     justify-content: space-around;
                     flex-wrap: wrap; 
@@ -124,6 +124,7 @@
                             color: #000;
                             height: 0.4rem;
                             overflow: hidden;
+                            line-height: 0.19rem;
                         }
                         span{
                             font-size: 16px;

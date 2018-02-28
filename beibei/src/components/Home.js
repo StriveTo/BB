@@ -17,7 +17,7 @@ export default class Home extends Component {
                     <Route path="/List" component={List} />
                     <Route path="/Login" component={Login} />
                 </section>
-                <footer>
+                <footer className="footer">
                     <NavLink exact activeclassname="active" to="/">
                         <i className="iconfont icon-shouye"></i>
                         <p>首页</p>

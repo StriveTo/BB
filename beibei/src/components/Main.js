@@ -84,7 +84,7 @@ export default class Main extends Component {
                                     <div className="lists" key={value.goods.title}>
                                         <h2>{value.goods.title}</h2>
                                         <h3>--  小编为你推荐以下产品  --</h3>
-                                        <ul>
+                                        <ul className="tle">
                                             {
                                                 value.goods.item.map((item, index)=>{
                                                     return (

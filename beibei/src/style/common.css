@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import '~antd/dist/antd.css';
 html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{
     margin:0;padding:0;
 }
@@ -41,4 +42,13 @@ body{
 }
 .banner img{
     width: 100%;
+}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
 }
