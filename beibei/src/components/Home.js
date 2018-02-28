@@ -3,7 +3,6 @@ import { NavLink, Route } from 'react-router-dom';
 
 import Main from './Main';
 import Search from './Search';
-import List from './List';
 import Login from './Login';
 
 import '../style/home.scss';
@@ -14,7 +13,6 @@ export default class Home extends Component {
                 <section className="contentbox">
                     <Route exact path="/" component={Main} />
                     <Route path="/Search" component={Search} />
-                    <Route path="/List" component={List} />
                     <Route path="/Login" component={Login} />
                 </section>
                 <footer className="footer">

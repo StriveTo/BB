@@ -1,0 +1,85 @@
+.list{
+    widows: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    header{
+        width: 100%;
+        height: 0.43rem;
+        background: #e7e7e9;
+        display: flex;
+        padding: 0.1rem;
+        justify-content: space-between;
+        i{
+            font-size: 20px!important;
+        }
+        a{
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                font-size: 30px!important;
+            }
+        }
+        
+    }
+    section{
+        flex: 1;
+        background: white;
+        display: flex;
+        .nav{
+            width: 0.83rem;
+            height: 100%;
+            background: #eee;
+            padding: 0 0.1rem;
+            li{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 0.64rem;
+                border-bottom: solid 1px #ddd;
+                color: #777;
+                font-size: 14px;
+                i{
+                    font-size: 22px!important;
+                }
+            }
+        }
+        .goods{
+            flex: 1;
+            h2{
+                height: 0.32rem;
+                padding-left: 0.1rem;
+                font-size: 14px;
+                line-height: 0.32rem;
+                background: #FCFCFC;
+                border-top: 1px solid #F5F5F5;
+                border-bottom: 1px solid #F5F5F5; 
+                i{
+                    color: red;
+                    font-size: 20px!important;
+                }
+                i:last-of-type{
+                    float: right;
+                    margin-right: 5px;
+                    color: #333;
+                }
+            }
+            .lis{
+                width: 100%;
+                padding: 0.1rem 0.2rem;
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    width: 33%;
+                    height: 0.32rem;
+                    line-height: 0.32rem;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
