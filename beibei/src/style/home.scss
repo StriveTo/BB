@@ -1,0 +1,23 @@
+footer{
+    width: 100%;
+    height: 0.52rem;
+    background: rgba(85,85,85,0.95);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        width: 25%;
+        color: #333;
+        i{
+            font-size: 24px!important;
+        }
+    }
+    .active{
+        color: white;
+    }
+}
