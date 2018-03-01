@@ -37,7 +37,7 @@ export default class Search extends Component {
         .then((res)=>{
             // console.log(res);
             // console.log(res.data.datas.list[0].adv_list.item);
-            console.log(res.data.datas.list.slice(3));
+            // console.log(res.data.datas.list.slice(3));
             this.setState({
                 swiper: res.data.datas.list[0].adv_list.item,
                 img1: res.data.datas.list[1].explode3.item,

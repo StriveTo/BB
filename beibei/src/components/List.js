@@ -38,7 +38,7 @@ export default class List extends Component {
         })
     }
     gotoDetail(name){
-        console.log(this);
+        // console.log(this);
         this.props.history.push("/detail/" + name);
     }
     componentDidMount(){
@@ -86,7 +86,7 @@ export default class List extends Component {
                             this.state.arr.map((item,index)=>{
                                 return (
                                     <div key={item.cat_id} className="arrs">
-                                        <h2><i className="iconfont icon-dian"></i>{item.cat_name}<i className="iconfont icon-youjiantou1"></i></h2>
+                                        <h2 onClick={()=>this.gotoDetail(item.cat_name)}><i className="iconfont icon-dian"></i>{item.cat_name}<i className="iconfont icon-youjiantou1"></i></h2>
                                         
                                         <ul className="lis">
                                         {

@@ -20,9 +20,9 @@ export default class Main extends Component {
     componentDidMount(){
         axios.get("/mo_bile/index.php?act=index")
         .then((res)=>{
-            console.log(res);
+            // console.log(res);
             // console.log(res.data.datas.list[0].adv_list.item[0]);
-            console.log(res.data.datas.list.slice(1));
+            // console.log(res.data.datas.list.slice(1));
 
             this.setState({
                 banner: res.data.datas.list[0].adv_list.item[0].image,
