@@ -33,7 +33,7 @@
             height: 100%;
             background: #eee;
             padding: 0 0.1rem;
-            li{
+            .change{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -46,6 +46,10 @@
                 i{
                     font-size: 22px!important;
                 }
+            }
+            .change:first-of-type{
+                color: #ED5564;
+                border-bottom: solid 2px #ED5564;
             }
         }
         .goods{

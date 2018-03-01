@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Home from './components/Home';
 import List from './components/List';
+import Detail from './components/Detail';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
                 <Route path="/Search" component={Home} />
                 <Route path="/Login" component={Home} />
                 <Route path="/List" component={List} />
+                <Route path="/detail/:name" component={Detail} />
             </div>
         </Router>
     );

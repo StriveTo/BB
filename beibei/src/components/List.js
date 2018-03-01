@@ -15,6 +15,7 @@ export default class List extends Component {
         }
 
         this.getId = this.getId.bind(this);
+        this.gotoDetail = this.gotoDetail.bind(this);
     }
     getId(id){
         axios.get("/mo_bile/index.php?act=goods_class&op=get_child_all&gc_id=" + id)
@@ -25,14 +26,20 @@ export default class List extends Component {
                 arr: res.data.datas.class_list
             })
         });
-        $(this).css({
-            "color": "#ED5564",
-            "border-bottom": "2px solid #ED5564"
-        });
-        $(this).siblings.css({
-            "color": "#777",
-            "border-bottom": "solid 1px #ddd"
+        $(".change").on('click',function(){
+            $(this).css({
+                "color": "#ED5564",
+                "border-bottom": "solid 2px #ED5564"
+            })
+            $(this).siblings().css({
+                "color": "#777",
+                "border-bottom": "solid 1px #ddd"
+            })
         })
+    }
+    gotoDetail(name){
+        console.log(this);
+        this.props.history.push("/detail/" + name);
     }
     componentDidMount(){
         axios.get("/mo_bile/index.php?act=goods_class")
@@ -66,7 +73,7 @@ export default class List extends Component {
                         {
                             this.state.list.map((item,index)=>{
                                 return (
-                                    <li onClick={()=>{this.getId(item.cat_id)}} key={item.cat_id}>
+                                    <li className="change" onClick={()=>{this.getId(item.cat_id)}} key={item.cat_id}>
                                         <i className={this.state.name[index]}></i>
                                         <span>{item.cat_name}</span>
                                     </li>
@@ -85,7 +92,7 @@ export default class List extends Component {
                                         {
                                             item.child.map((value,index)=>{
                                                 return (
-                                                    <li key={value.cat_id}>{value.cat_name}</li>
+                                                    <li onClick={()=>this.gotoDetail(value.cat_name)} key={value.cat_id}>{value.cat_name}</li>
                                                 )
                                             })
                                         }
