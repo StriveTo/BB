@@ -57,10 +57,26 @@ export default class Sub extends Component {
                 $(".rate span:eq(2) b").css("background","#ED5564");
             }
         })
+        $(window).scroll(function(){
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            // console.log(scrollTop);
+            if(scrollTop > 100){
+                $(".head").stop().fadeIn(200);
+            }else{
+                $(".head").stop().fadeOut(200);
+            }
+       })
     }
     render (){
         return (
             <div className="sub">
+                <div className="head">
+                    <a href="javascript:history.go(-1)">
+                        <i className="iconfont icon-zuojiantou"></i>
+                    </a>
+                    <h1>商品</h1>
+                    <i className="iconfont icon-shixincaidan"></i>
+                </div>
                 <Carousel dots={true} className="banner">
                 {
                     this.state.imgSrc.map((item,index)=>{
