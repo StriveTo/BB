@@ -18,14 +18,6 @@ export default class List extends Component {
         this.gotoDetail = this.gotoDetail.bind(this);
     }
     getId(id){
-        axios.get("/mo_bile/index.php?act=goods_class&op=get_child_all&gc_id=" + id)
-        .then((res)=>{
-            // console.log(res);
-            // console.log(res.data.datas.class_list);
-            this.setState({
-                arr: res.data.datas.class_list
-            })
-        });
         $(".change").on('click',function(){
             $(this).css({
                 "color": "#ED5564",
@@ -36,6 +28,14 @@ export default class List extends Component {
                 "border-bottom": "solid 1px #ddd"
             })
         })
+        axios.get("/mo_bile/index.php?act=goods_class&op=get_child_all&gc_id=" + id)
+        .then((res)=>{
+            // console.log(res);
+            // console.log(res.data.datas.class_list);
+            this.setState({
+                arr: res.data.datas.class_list
+            })
+        });
     }
     gotoDetail(name){
         // console.log(this);
