@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 import '../style/login.scss';
 export default class Login extends Component {
-    constructor (props){
-        super(props);
+    componentDidMount(){
+        $(window).scroll(function(){
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            // console.log(scrollTop);
+            if(scrollTop > 100){
+                $(".head").css("top","0").stop().fadeIn(100);
+            }else{              
+                $(".head").stop().fadeOut(100,function(){
+                    $(".head").css("top","-0.43rem"); 
+                }); 
+            }
+       })
     }
     render (){
         return (

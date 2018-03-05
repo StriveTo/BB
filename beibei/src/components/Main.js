@@ -13,9 +13,14 @@ export default class Main extends Component {
         }
 
         this.gotoSub = this.gotoSub.bind(this);
+        this.gotoFind = this.gotoFind.bind(this);
     }
     gotoSub(){
         window.location="http://www.hangowa.com/wap/special.html?special_id=28";
+    }
+    gotoFind(){
+        console.log(this);
+        this.props.history.push("/find");
     }
     componentDidMount(){
         axios.get("/mo_bile/index.php?act=index")
@@ -40,7 +45,7 @@ export default class Main extends Component {
                 </BackTop>
                 <header>
                     <img src="http://www.hangowa.com/wap/images/home_logo.png" alt=""/>
-                    <div className="srh">
+                    <div className="srh" onClick={this.gotoFind}>
                         <i className="iconfont icon-sousuo"></i>
                     </div>
                     <div className="car">

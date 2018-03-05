@@ -4,6 +4,7 @@ import { NavLink, Route } from 'react-router-dom';
 import Main from './Main';
 import Search from './Search';
 import Login from './Login';
+// import Find from './Find';
 
 import '../style/home.scss';
 export default class Home extends Component {
@@ -14,6 +15,7 @@ export default class Home extends Component {
                     <Route exact path="/" component={Main} />
                     <Route path="/Search" component={Search} />
                     <Route path="/Login" component={Login} />
+                    {/* <Route path="/find" component={Find} /> */}
                 </section>
                 <footer className="footer">
                     <NavLink exact activeclassname="active" to="/">

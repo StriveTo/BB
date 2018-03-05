@@ -17,17 +17,16 @@ export default class List extends Component {
         this.getId = this.getId.bind(this);
         this.gotoDetail = this.gotoDetail.bind(this);
     }
-    getId(id){
-        $(".change").on('click',function(){
-            $(this).css({
+    getId(id,index){            
+            $(".change").eq(index).css({
                 "color": "#ED5564",
                 "border-bottom": "solid 2px #ED5564"
             })
-            $(this).siblings().css({
+            $(".change").eq(index).siblings().css({
                 "color": "#777",
                 "border-bottom": "solid 1px #ddd"
             })
-        })
+      
         axios.get("/mo_bile/index.php?act=goods_class&op=get_child_all&gc_id=" + id)
         .then((res)=>{
             // console.log(res);
@@ -73,7 +72,7 @@ export default class List extends Component {
                         {
                             this.state.list.map((item,index)=>{
                                 return (
-                                    <li className="change" onClick={()=>{this.getId(item.cat_id)}} key={item.cat_id}>
+                                    <li className="change" onClick={()=>{this.getId(item.cat_id,index)}} key={item.cat_id}>
                                         <i className={this.state.name[index]}></i>
                                         <span>{item.cat_name}</span>
                                     </li>
